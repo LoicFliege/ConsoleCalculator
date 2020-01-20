@@ -38,8 +38,8 @@ public class CalculatorTest {
 		assertTrue(testee.adition(0, -5) == -5);
 	}
 	@Test
-	public void testSummeZweiNullIsOk() {
-		assertTrue(testee.adition(0, 0) == 0);
+	public void testSummeMaxValuePlusMinValue() {
+		assertTrue(testee.adition(Integer.MAX_VALUE, Integer.MIN_VALUE) == 0);
 	}
 	@Test(expected = AssertionError.class)
 	public void testSummeZweiMaxIntegerIsNOk() {
@@ -55,7 +55,30 @@ public class CalculatorTest {
 	public void testSubtractionZweiNegativIsOk() {
 		assertTrue(testee.subtraction(25, -10) == 35);
 	}
-	
+	@Test
+	public void testSubtractionEinNegativEinPositivIsOk() {
+		assertTrue(testee.subtraction(-5, 10) == -15);
+	}
+	@Test
+	public void testSubtractionMaxValueMinusMinValueIsOk() {
+		assertTrue(testee.subtraction(Integer.MAX_VALUE, Integer.MIN_VALUE) == 0);
+	}
+	@Test
+	public void testSubtractionZeroMinusPositivIsOk() {
+		assertTrue(testee.subtraction(0, 10) == -10);
+	}
+	@Test
+	public void testSubtractionPositiveMinusZeroIsOk() {
+		assertTrue(testee.subtraction(10, 0) == 10);
+	}
+	@Test
+	public void testSubtractionNegativMinusZeroIsOk() {
+		assertTrue(testee.subtraction(-10, 0) == -10);
+	}
+	@Test
+	public void testSubtractionZeroMinusNegativIsOk() {
+		assertTrue(testee.subtraction(0, -10) == 10);
+	}
 	
 	@Test(expected=ArithmeticException.class)
 	public void testDivisonThroughZeroArithmeticException() {
