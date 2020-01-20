@@ -31,5 +31,14 @@ public class CalculatorTest {
 	public void testSubtractionZweiNegativIsOk() {
 		assertTrue(testee.subtraction(25, -10) == 35);
 	}
+	
+	@Test(expected=ArithmeticException.class)
+	public void testDivisonThroughZeroArithmeticException() {
+		assertTrue(testee.division(5,0) == 0);
+	}
+	@Test
+	public void testDivisonZweiPositivIsOk() {
+		assertTrue(testee.division(25, 5) == 5);
+	}
 
 }
