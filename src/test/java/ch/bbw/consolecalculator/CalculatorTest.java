@@ -38,7 +38,7 @@ public class CalculatorTest {
 		assertTrue(testee.adition(0, -5) == -5);
 	}
 	@Test
-	public void testSummeMaxValuePlusMinValue() {
+	public void testSummeMaxValuePlusMinValueIsNok() {
 		assertTrue(testee.adition(Integer.MAX_VALUE, Integer.MIN_VALUE) == 0);
 	}
 	@Test(expected = AssertionError.class)
@@ -60,7 +60,7 @@ public class CalculatorTest {
 		assertTrue(testee.subtraction(-5, 10) == -15);
 	}
 	@Test
-	public void testSubtractionMaxValueMinusMinValueIsOk() {
+	public void testSubtractionMaxValueMinusMinValueIsNOk() {
 		assertTrue(testee.subtraction(Integer.MAX_VALUE, Integer.MIN_VALUE) == 0);
 	}
 	@Test
@@ -80,6 +80,7 @@ public class CalculatorTest {
 		assertTrue(testee.subtraction(0, -10) == 10);
 	}
 	
+	
 	@Test(expected=ArithmeticException.class)
 	public void testDivisonThroughZeroArithmeticException() {
 		assertTrue(testee.division(5,0) == 0);
@@ -87,6 +88,30 @@ public class CalculatorTest {
 	@Test
 	public void testDivisonZweiPositivIsOk() {
 		assertTrue(testee.division(25, 5) == 5);
+	}
+	@Test
+	public void testDivisionEinPositivEinNegativIsOk() {
+		assertTrue(testee.division(5, -5) == -1);
+	}
+	@Test
+	public void testDivisionZweiNegativIsOk() {
+		assertTrue(testee.division(-5, -5) == 1);
+	}
+	@Test
+	public void testDivisonZeroThroughPositivIsOk() {
+		assertTrue(testee.division(0, 5) == 0);
+	}
+	@Test
+	public void testDivisionZeroThroughNegativIsOk() {
+		assertTrue(testee.division(0, -5) == 0);
+	}
+	@Test
+	public void testDivisonZweiMaxValueIsOk() {
+		assertTrue(testee.division(Integer.MAX_VALUE, Integer.MAX_VALUE) == 1);
+	}
+	@Test
+	public void testDivisionZweiMinValueIsOk() {
+		assertTrue(testee.division(Integer.MIN_VALUE, Integer.MIN_VALUE) == 1);
 	}
 	
 	@Test
