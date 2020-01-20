@@ -37,7 +37,7 @@ public class CalculatorTest {
 	public void testSummeNullPlusNegativerWertIsOk() {
 		assertTrue(testee.adition(0, -5) == -5);
 	}
-	@Test
+	@Test(expected = AssertionError.class)
 	public void testSummeMaxValuePlusMinValueIsNok() {
 		assertTrue(testee.adition(Integer.MAX_VALUE, Integer.MIN_VALUE) == 0);
 	}
@@ -59,7 +59,7 @@ public class CalculatorTest {
 	public void testSubtractionEinNegativEinPositivIsOk() {
 		assertTrue(testee.subtraction(-5, 10) == -15);
 	}
-	@Test
+	@Test(expected = AssertionError.class)
 	public void testSubtractionMaxValueMinusMinValueIsNOk() {
 		assertTrue(testee.subtraction(Integer.MAX_VALUE, Integer.MIN_VALUE) == 0);
 	}
