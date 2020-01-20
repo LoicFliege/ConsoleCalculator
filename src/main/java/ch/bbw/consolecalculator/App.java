@@ -1,7 +1,8 @@
 package ch.bbw.consolecalculator;
 
 /**
- * Hello world!
+ * @author Loïc Fliege
+ * @version 0.0.1
  *
  */
 public class App 
