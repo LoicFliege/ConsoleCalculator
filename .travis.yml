@@ -5,7 +5,6 @@ deploy:
   provider: releases
   api_key:
     secure: FexrLtGtOSP6DUAk798PQ5w9CPXOhAYVhOrtTwTzdUXwRp5w7nx8ww4qoNh9gLDPWLANf/kEYA43qhqEcxfuGlUrlsTq5/C9W/i5xlEpKdYdIo8Sc9Jaz1fMW+d10/rAgoVQUdAldqkO8ZCbbCxxmtonoeRemFCEICKvtlomaaF4i4vdlfpsvIMBLRJY38fGuECzMCQLrxdvUO76eBOoZstiFJCXlAl3om0VZNIH5gNYm5rLQA7JppsjgghLWla9mZnGLZjkEeLpd8qDjTNXEbjHPr+dHtpn9fFZcSIr8ADdFw7gXypCAuvqGSS9zp0CbttW/hX6PWQKoGXTTpUCu1Y11YdLQ5oPpOR7YcZjFRF3U3Ku+zmDYk8BuVuSqyNjwIe9ZrJtkMhVmZXcDSPGq8R1t9got79e0WsoEWv3p29gnnCImS9uD+iNwUJx40ooCo2ODCdlE+xvzWRdf3ujQ/nYgG47H/0Apfjs/1LT5nvQ7HBEM+bHDbAy4l5uMBeRAZySK8f8c36iy731RD4q1OJoaaKpabUOfoyei4qSR2gjVhvqSMY4HVrlDMnaZIgcKVeIwXlXoZgMTy4Ws1rXybQrfZD+J6LnXD/6qezMrHg5eu1WL5M+nPUJUmYdOczf+gZTrgxX3tE4S4+7MpoUT3BHUE1dpxVcgmlvC+/eUDs=
-  file: "/home/travis/build/LoicFliege/ConsoleCalculator/target/02_ConsoleCalculator-0.0.1-SNAPSHOT.jar
-    to /home/travis/.m2/repository/ch/bbw/02_ConsoleCalculator/0.0.1-SNAPSHOT/02_ConsoleCalculator-0.0.1-SNAPSHOT.jar"
+  file: "/home/travis/.m2/repository/ch/bbw/02_ConsoleCalculator/0.0.1-SNAPSHOT/02_ConsoleCalculator-0.0.1-SNAPSHOT.jar"
   on:
     repo: LoicFliege/ConsoleCalculator
