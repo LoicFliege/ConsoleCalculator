@@ -21,16 +21,41 @@ public class CalculatorTest {
 	public void testSummeZweiNegativIsOk() {
 		assertTrue(testee.adition(-10, -20) == -30);;
 	}
+	@Test
+	public void testSummeEinPositivEinNegativIsOk() {
+		assertTrue(testee.adition(-10, 20) == 10);
+	}
+	@Test
+	public void testSummeHoechsterIntegerWertPlusEinsIsOk() {
+		assertTrue(testee.adition(Integer.MAX_VALUE, 1) == Integer.MIN_VALUE);
+	}
+	@Test
+	public void testSummeNullPlusPositiverWertIsOk() {
+		assertTrue(testee.adition(0, 5) == 5);
+	}
+	@Test
+	public void testSummeNullPlusNegativerWertIsOk() {
+		assertTrue(testee.adition(0, -5) == -5);
+	}
+	@Test
+	public void testSummeZweiNullIsOk() {
+		assertTrue(testee.adition(0, 0) == 0);
+	}
+	@Test(expected = AssertionError.class)
+	public void testSummeZweiMaxIntegerIsNOk() {
+		assertTrue(testee.adition(Integer.MAX_VALUE, Integer.MAX_VALUE) == 0);
+	}
+	
 	
 	@Test
 	public void testSubtractionZweiPositiveIsOk() {
 		assertTrue(testee.subtraction(25,10) == 15);
 	}
-
 	@Test
 	public void testSubtractionZweiNegativIsOk() {
 		assertTrue(testee.subtraction(25, -10) == 35);
 	}
+	
 	
 	@Test(expected=ArithmeticException.class)
 	public void testDivisonThroughZeroArithmeticException() {
