@@ -40,5 +40,10 @@ public class CalculatorTest {
 	public void testDivisonZweiPositivIsOk() {
 		assertTrue(testee.division(25, 5) == 5);
 	}
+	
+	@Test
+	public void testMultiplicationZweiPositivIsOk() {
+		assertTrue(testee.multiplication(5, 5) == 25);
+	}
 
 }
